@@ -1,0 +1,63 @@
+#Name : jason daly
+# question 1 
+
+print("This program can find the perimeter or area of a quadrilateral") #(i) explaining the program 
+
+length = float(input("Please enter the length: "))
+width = float(input("Please enter the width: ")) #(iii) asking the user to input the width and length of the quadrilateral
+
+name = input("Enter your user name: ") #(ii) asking the user's name
+
+choice = input("Do you want to find the (p)erimeter or the (a)rea? : ")
+if choice == "p":
+    perimeter =2*(length) + 2*(width) #(vi) changing the formula for the perimeter
+    print("A quadrilateral with a length of" , length , "and a width of" , width , "has a perimeter of " , round(perimeter , 2)) #(v) making the output more informative
+elif choice == "a":
+    area = (length*width)
+    print("A quadrilateral with a length of" , length , "and a width of" , width , "has an area of " , round(area , 2)) #(iv) rounding the output to 2 deicmal places
+    
+print("Thank you for using the program " , name) #(ii)
+
+# Question 1(b)
+# Jason daly
+
+import random
+
+computer_options = ["rock" , "paper" , "scissors"]
+
+userChoice = input("Enter rock, paper or scissors: ") #(i) giving the user a choice of rock, paper or scissors
+print("Player chose:" , userChoice ) #(i) users choice is printed out
+
+computer_choice = computer_options [random.randint(0 , 2)]
+print("Computer chose:" , computer_choice)#(i) prints the computers choice
+if userChoice == "rock" and computer_choice == "paper": 
+    print("Computer wins")
+elif userChoice == "scissors" and computer_choice == "rock":
+    print("Computer wins")
+elif userChoice == "paper" and computer_choice == "scissors":
+    print("Computer wins")
+elif userChoice == "paper" and computer_choice == "rock":
+    print("Player wins")
+elif userChoice == "rock" and computer_choice == "scissors":
+    print("Player wins")
+elif userChoice == "scissors" and computer_choice == "paper":
+    print("Player wins")
+else:
+    print("Draw!")#(iii) the code so the game works
+    
+    
+#Question 2
+#Jason Daly
+
+def sales():
+    vipCost = vipSales*(150)
+    regCost = regSales*(75)
+    budCost = budSales*(40)
+    totalRev = (vipCost + regCost + budCost)# adding up the ticket sales
+    print("The total revenue for the ticket sales is €",totalRev)# printint the total revenue for the tickets
+
+vipSales = int(input("How many vip tickets were sold?: "))#asking how many vip tickets were sold
+regSales = int(input("How many regular tickets were sold?: "))#asking how many regular tickets were sold
+budSales = int(input("How many budget tickets were sold?: "))#asking how many budget tickets were sold
+
+sales()#calling the function so it can do the maths and print the total revenue
